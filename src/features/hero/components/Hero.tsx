@@ -1,53 +1,45 @@
-import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/image-01.png"
-          alt="Wedding Couple"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </div>
+    <div className="relative bg-[#FFF9F6] min-h-[70vh] flex items-center justify-center overflow-hidden">
       
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 text-center text-white space-y-6 px-4"
-      >
-        <p className="text-xl md:text-2xl font-light tracking-[0.2em] uppercase">Trân trọng kính mời</p>
-        
-        <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif leading-tight">
-          <span className="block mb-2">Chú Rể</span>
-          <span className="text-2xl md:text-5xl font-light block my-4">&</span>
-          <span className="block mt-2">Cô Dâu</span>
-        </h1>
+      {/* Top Left Floral */}
+      <div className="absolute top-0 left-0 w-[400px] md:w-[600px] opacity-90 pointer-events-none z-20">
+        <img src="/images/floral-corner.png" className="w-full h-auto" alt="" onError={(e) => (e.currentTarget.style.display = 'none')} />
+      </div>
 
-        <div className="flex items-center justify-center gap-6 text-xl md:text-3xl font-light tracking-widest mt-8">
-          <span>01</span>
-          <span className="w-px h-8 bg-white/60"></span>
-          <span>01</span>
-          <span className="w-px h-8 bg-white/60"></span>
-          <span>2025</span>
-        </div>
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:max-w-4xl lg:ml-20">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2 }}
+          className="space-y-4"
+        >
+          <p className="text-stone-500 font-serif text-sm md:text-base tracking-[0.5em] uppercase mb-8 opacity-80">Chúng tôi cưới</p>
+          
+          <div className="space-y-2">
+             <h1 className="text-5xl md:text-7xl font-serif text-[#A03D1A] italic leading-[1] drop-shadow-sm flex flex-col items-center lg:items-start">
+               <span className="block mb-4">Ngọc Minh</span>
+               <span className="text-3xl md:text-4xl text-stone-400 block my-6 lg:ml-24">&</span>
+               <span className="block">Linh Nhi</span>
+             </h1>
+          </div>
+        </motion.div>
+      </div>
 
-        <p className="text-lg md:text-xl font-light italic mt-4 opacity-90">
-          Hà Nội, Việt Nam
-        </p>
-
-        <div className="pt-12">
-          <Button 
-            size="lg" 
-            className="bg-white/90 text-stone-900 hover:bg-white hover:scale-105 transition-all duration-300 rounded-full px-10 py-6 text-lg tracking-wider shadow-lg"
-          >
-            Xác nhận tham dự
-          </Button>
-        </div>
-      </motion.div>
-    </section>
+      {/* Elegant Date Footer Block (Huge Faint Date) */}
+      <div className="absolute bottom-12 left-1/2 lg:left-24 -translate-x-1/2 lg:translate-x-0 w-full lg:w-auto flex flex-col items-center lg:items-start z-0 opacity-20">
+          <div className="flex items-center gap-10">
+              <span className="text-5xl md:text-7xl font-serif text-[#A03D1A] font-light tracking-tighter">07</span>
+              <div className="w-px h-20 bg-[#A03D1A]"></div>
+              <span className="text-5xl md:text-7xl font-serif text-[#A03D1A] font-light tracking-tighter">03</span>
+              <div className="w-px h-20 bg-[#A03D1A]"></div>
+              <span className="text-5xl md:text-7xl font-serif text-[#A03D1A] font-light tracking-tighter">2026</span>
+          </div>
+      </div>
+    </div>
   )
 }
+
+

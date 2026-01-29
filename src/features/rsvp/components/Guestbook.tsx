@@ -1,3 +1,6 @@
+import * as React from "react"
+import { supabase } from "@/lib/supabase"
+import { Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -19,6 +22,7 @@ const formSchema = z.object({
 })
 
 export function Guestbook() {
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -27,9 +31,28 @@ export function Guestbook() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-    alert("Cảm ơn bạn đã gửi lời chúc!")
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true)
+    try {
+      const { error } = await supabase
+        .from('guestbook')
+        .insert([
+          { 
+            name: values.name, 
+            message: values.message
+          }
+        ])
+
+      if (error) throw error
+
+      alert("Cảm ơn bạn đã gửi lời chúc!")
+      form.reset()
+    } catch (error) {
+      console.error('Error submitting guestbook:', error)
+      alert("Đã có lỗi xảy ra. Vui lòng thử lại sau!")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -89,8 +112,10 @@ export function Guestbook() {
                 <div className="flex justify-center pt-8">
                     <Button 
                         type="submit" 
+                        disabled={isSubmitting}
                         className="bg-[#A03D1A] hover:bg-[#8B3516] text-white px-16 py-8 rounded-full text-xl uppercase tracking-widest shadow-lg"
                     >
+                        {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                         GỬI LỜI CHÚC
                     </Button>
                 </div>

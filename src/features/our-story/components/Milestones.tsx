@@ -25,7 +25,10 @@ export const Milestones = () => {
   return (
     <section className="py-24 bg-[#FCF9F6] text-stone-800 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-5xl md:text-6xl font-serif text-center mb-20 text-[#8B4513] italic">Cột mốc</h2>
+        <div className="text-center mb-20 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-serif text-[#8B4513] italic">Chuyện chúng mình</h2>
+          <p className="text-stone-400 font-serif tracking-[0.3em] uppercase text-xs">Cột mốc</p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {milestones.map((item, index) => (

@@ -1,33 +1,38 @@
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
+import * as React from "react"
+import { CalendarDialog } from './CalendarDialog'
 
 const events = [
   {
     title: "ĂN HỎI",
     time: "10:00 AM",
-    date: "20 | 7 | 2024",
-    address: "45 Nguyễn Khoái, Hai Bà Trưng, Hà Nội",
-    icon: "/images/icon-rings.png", // Need placeholder or generic
+    date: "14 | 02 | 2026",
+    address: "Nhà riêng",
+    icon: "/images/icon-rings.png", 
   },
   {
     title: "ĐÓN DÂU",
-    time: "10:00 AM",
-    date: "20 | 7 | 2024",
-    address: "45 Nguyễn Khoái, Hai Bà Trưng, Hà Nội",
+    time: "08:00 AM",
+    date: "07 | 03 | 2026",
+    address: "Nhà riêng",
     icon: "/images/icon-car.png",
   },
   {
     title: "TIỆC CƯỚI",
-    time: "10:00 AM",
-    date: "20 | 7 | 2024",
-    address: "45 Nguyễn Khoái, Hai Bà Trưng, Hà Nội",
+    time: "11:00 AM",
+    date: "07 | 03 | 2026",
+    address: "TRUNG TÂM TIỆC CƯỚI W.JARDIN (Sảnh 2), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",
   }
 ]
 
 export const Events = () => {
+  const [isCalendarOpen, setIsCalendarOpen] = React.useState(false)
+
   return (
     <section className="py-24 bg-[#FCF9F6] border-t border-stone-100">
+      <CalendarDialog open={isCalendarOpen} onOpenChange={setIsCalendarOpen} />
       <div className="container mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-serif text-center mb-24 text-[#8B4513] italic">Sự kiện</h2>
         
@@ -66,10 +71,14 @@ export const Events = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <Button variant="outline" className="border-[#8B4513] text-[#8B4513] hover:bg-[#8B4513] hover:text-white rounded-none px-6">
+                  <Button variant="outline" className="border-[#8B4513] text-[#8B4513] hover:bg-[#8B3513] hover:text-white rounded-none px-6 shadow-none">
                     CHỈ ĐƯỜNG
                   </Button>
-                  <Button className="bg-[#F5E6DA] text-[#8B4513] hover:bg-[#EEDDCC] rounded-none px-6 shadow-none">
+                  <Button 
+                    variant="secondary"
+                    onClick={() => setIsCalendarOpen(true)}
+                    className="bg-[#F5E6DA] text-[#8B4513] hover:bg-[#EEDDCC] rounded-none px-6 shadow-none"
+                  >
                     THÊM VÀO LỊCH
                   </Button>
                 </div>
@@ -81,3 +90,4 @@ export const Events = () => {
     </section>
   )
 }
+

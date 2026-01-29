@@ -19,7 +19,7 @@ export const GiftSection = () => {
                             <div className="w-24 h-24 bg-stone-100 flex items-center justify-center font-mono text-xs text-stone-400">QR CODE</div>
                             <div className="text-left space-y-1">
                                 <p className="text-xs uppercase tracking-widest text-stone-400">Ngân hàng A</p>
-                                <p className="text-sm font-serif">Chú rể</p>
+                                <p className="text-sm font-serif">Ngọc Minh</p>
                                 <p className="text-sm tracking-widest">123456789</p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ export const GiftSection = () => {
                         <div className="flex items-center gap-6">
                             <div className="text-right space-y-1">
                                 <p className="text-xs uppercase tracking-widest text-stone-400">Ngân hàng B</p>
-                                <p className="text-sm font-serif">Cô dâu</p>
+                                <p className="text-sm font-serif">Linh Nhi</p>
                                 <p className="text-sm tracking-widest">987654321</p>
                             </div>
                             <div className="w-24 h-24 bg-stone-100 flex items-center justify-center font-mono text-xs text-stone-400">QR CODE</div>
