@@ -64,7 +64,7 @@ export function Guestbook() {
         viewport={{ once: true }}
         className="container mx-auto px-4 max-w-2xl text-center"
       >
-        <h2 className="text-5xl md:text-7xl font-serif mb-12 text-[#8B4513] italic">Sổ lưu bút</h2>
+        <h2 className="text-5xl md:text-6xl mb-12 text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Sổ lưu bút</h2>
         
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -121,14 +121,6 @@ export function Guestbook() {
                 </div>
             </form>
         </Form>
-
-        <div className="mt-20 border-t border-stone-800 pt-12 text-left italic">
-            <h4 className="font-bold text-stone-900 not-italic mb-2">Huy Thanh Jewelry</h4>
-            <p className="text-stone-600 text-sm leading-relaxed">
-                Huy Thanh rất vui khi được đồng hành cùng hai bạn trong chặng đường hạnh phúc. Dù sông có đối núi có dời, chúc hai bạn vẫn một đời thương nhau &lt;3
-            </p>
-            <div className="mt-8 border-t border-dotted border-stone-300"></div>
-        </div>
       </motion.div>
     </section>
   )

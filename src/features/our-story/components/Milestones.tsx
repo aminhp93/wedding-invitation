@@ -23,14 +23,14 @@ const milestones = [
 
 export const Milestones = () => {
   return (
-    <section className="py-24 bg-[#FCF9F6] text-stone-800 relative overflow-hidden">
+    <section id="milestones" className="py-24 bg-white text-stone-800 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-5xl md:text-6xl text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Chuyện chúng mình</h2>
-          <p className="text-stone-400 font-serif tracking-[0.3em] uppercase text-xs">Cột mốc</p>
+          <h2 className="text-5xl md:text-6xl text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Cột mốc</h2>
+          <div className="w-24 h-px bg-[#A03D1A] mx-auto opacity-30"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {milestones.map((item, index) => (
             <motion.div
               key={index}
@@ -38,26 +38,29 @@ export const Milestones = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center text-center"
+              className="group relative"
             >
-              <div className="relative w-full aspect-[4/5] mb-8">
-                {/* Arch frame effect using clip-path or rounded-t-full */}
-                <div className="w-full h-full overflow-hidden rounded-t-full border-[10px] border-white shadow-xl">
+              {/* Unified Block: Image + Content */}
+              <div className="space-y-6 flex flex-col items-center text-center">
+                <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-full">
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  {/* Subtle overlay gradient to tie image and text together if needed */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-white/20 to-transparent"></div>
                 </div>
-                {/* Decorative flowers could be added here as small absolute imgs */}
-              </div>
-              
-              <h3 className="text-3xl font-serif mb-4 text-[#8B4513] italic">{item.title}</h3>
-              <p className="text-sm font-light leading-relaxed text-stone-500 mb-6 max-w-[280px]">
-                {item.description}
-              </p>
-              <div className="text-2xl font-light tracking-[0.2em] text-[#D4A373] opacity-60">
-                {item.date}
+                
+                <div className="px-4 space-y-3">
+                  <h3 className="text-4xl text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>{item.title}</h3>
+                  <div className="text-xl font-light tracking-[0.2em] text-[#D4A373] opacity-80">
+                    {item.date}
+                  </div>
+                  <p className="text-sm font-light leading-relaxed text-stone-500 max-w-[280px] mx-auto">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

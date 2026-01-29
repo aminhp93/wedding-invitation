@@ -16,11 +16,12 @@ export const GiftSection = () => {
                     <div className="flex-1 flex flex-col items-center">
                         <h3 className="text-2xl font-serif text-[#8B4513] italic mb-6">Mừng cưới đến chú rể</h3>
                         <div className="flex items-center gap-6">
-                            <div className="w-24 h-24 bg-stone-100 flex items-center justify-center font-mono text-xs text-stone-400">QR CODE</div>
-                            <div className="text-left space-y-1">
-                                <p className="text-xs uppercase tracking-widest text-stone-400">Ngân hàng A</p>
-                                <p className="text-sm font-serif">Ngọc Minh</p>
-                                <p className="text-sm tracking-widest">123456789</p>
+                            <div className="w-32 h-40 bg-white shadow-md rounded-lg overflow-hidden border border-stone-100 p-1 flex items-center justify-center">
+                                <img 
+                                    src="/images/ngan hang chu re.JPG" 
+                                    className="w-full h-full object-contain" 
+                                    alt="QR Chú rể" 
+                                />
                             </div>
                         </div>
                     </div>
@@ -40,18 +41,19 @@ export const GiftSection = () => {
                     <div className="flex-1 flex flex-col items-center">
                         <h3 className="text-2xl font-serif text-[#8B4513] italic mb-6">Mừng cưới đến cô dâu</h3>
                         <div className="flex items-center gap-6">
-                            <div className="text-right space-y-1">
-                                <p className="text-xs uppercase tracking-widest text-stone-400">Ngân hàng B</p>
-                                <p className="text-sm font-serif">Linh Nhi</p>
-                                <p className="text-sm tracking-widest">987654321</p>
+                            <div className="w-32 h-40 bg-white shadow-md rounded-lg overflow-hidden border border-stone-100 p-1 flex items-center justify-center">
+                                <img 
+                                    src="/images/ngan hang co dau.jpeg" 
+                                    className="w-full h-full object-contain" 
+                                    alt="QR Cô dâu" 
+                                />
                             </div>
-                            <div className="w-24 h-24 bg-stone-100 flex items-center justify-center font-mono text-xs text-stone-400">QR CODE</div>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-16 text-center">
-                    <h2 className="text-5xl md:text-6xl font-serif text-[#8B4513] italic mb-8">Mừng cưới</h2>
+                    <h2 className="text-5xl md:text-6xl text-[#A03D1A] mb-8" style={{ fontFamily: '"Pinyon Script", cursive' }}>Mừng cưới</h2>
                     <p className="text-stone-500 font-light max-w-lg mx-auto leading-relaxed">
                         Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nhé ^^. Cảm ơn bạn rất nhiều!
                     </p>

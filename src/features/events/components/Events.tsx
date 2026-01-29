@@ -7,22 +7,22 @@ const events = [
   {
     title: "ĂN HỎI",
     time: "10:00 AM",
-    date: "14 | 02 | 2026",
-    address: "Nhà riêng",
+    date: "21 | 02 | 2026",
+    address: "Nhà riêng: Tại số 62B Kiều Sơn, Hải An, Hải Phòng",
     icon: "/images/icon-rings.png", 
   },
   {
     title: "ĐÓN DÂU",
     time: "08:00 AM",
-    date: "07 | 03 | 2026",
-    address: "Nhà riêng",
+    date: "28 | 02 | 2026",
+    address: "Nhà riêng: Tại Chùa gần Đồng Sau, Đồng Sơn, Thành phố Bắc Giang, Tỉnh Bắc Giang",
     icon: "/images/icon-car.png",
   },
   {
     title: "TIỆC CƯỚI",
-    time: "11:00 AM",
+    time: "10:00 AM",
     date: "07 | 03 | 2026",
-    address: "TRUNG TÂM TIỆC CƯỚI W.JARDIN (Sảnh 2), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
+    address: "TRUNG TÂM TIỆC CƯỚI W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",
   }
 ]
@@ -34,7 +34,7 @@ export const Events = () => {
     <section className="py-24 bg-[#FCF9F6] border-t border-stone-100">
       <CalendarDialog open={isCalendarOpen} onOpenChange={setIsCalendarOpen} />
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl md:text-6xl font-serif text-center mb-24 text-[#8B4513] italic">Sự kiện</h2>
+        <h2 className="text-5xl md:text-6xl text-center mb-24 text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Sự kiện</h2>
         
         <div className="relative">
           {/* Timeline Line */}
@@ -50,12 +50,14 @@ export const Events = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center text-center group"
               >
-                {/* Icon Placeholder or Image */}
+                {/* Icon Rendering */}
                 <div className="w-32 h-32 mb-8 relative z-10 flex items-center justify-center">
-                   {/* Placeholder for now, could use actual images if provided */}
-                   <div className="w-24 h-24 bg-white rounded-xl shadow-md rotate-3 group-hover:rotate-0 transition-transform flex items-center justify-center p-4">
-                      <div className="w-full h-full bg-stone-100 rounded-lg flex items-center justify-center italic text-stone-400 text-xs">ICON</div>
-                   </div>
+                      <img 
+                        src={event.icon} 
+                        alt={event.title} 
+                        className="w-full h-full object-contain"
+                      />
+
                 </div>
 
                 <div className="bg-[#8B4513] text-white px-8 py-2 rounded-full mb-8 tracking-[0.2em] transform -translate-y-4 group-hover:scale-110 transition-transform">

@@ -11,6 +11,7 @@ import { HeroActionButtons } from '@/features/hero/components/HeroActionButtons'
 import { ArchedImages } from '@/features/hero/components/ArchedImages'
 import { RsvpDialog } from '@/features/rsvp/components/RsvpDialog'
 import { Music2, Menu } from 'lucide-react'
+import { StorySection } from '@/features/our-story/components/StorySection'
 import * as React from 'react'
 
 export const Route = createFileRoute('/')({
@@ -50,7 +51,10 @@ function Index() {
       {/* 6. album anh cuoi */}
       <Album />
 
-      {/* 7. Chuyện chúng mình & 8. cot moc */}
+      {/* 7. Chuyện chúng mình */}
+      <StorySection />
+
+      {/* 8. Cột mốc */}
       <Milestones />
 
       {/* 9. Sự kiện */}
