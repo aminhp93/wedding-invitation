@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
+import * as React from "react"
+import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 export const StorySection = () => {
+    const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
   return (
     <section id="story" className="py-24 bg-[#FCF9F6] text-stone-800 relative overflow-hidden min-h-[900px] flex items-center">
+      <ImageLightbox 
+          src={selectedImage} 
+          isOpen={!!selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+      />
       
       {/* Large Vertical LOVE STORY Text - Far Right */}
       <div className="absolute right-2 md:right-10 top-1/2 -translate-y-1/2 z-0 hidden lg:block">
@@ -35,10 +43,6 @@ export const StorySection = () => {
             className="text-stone-500 font-light leading-relaxed space-y-6 text-lg max-w-2xl mx-auto"
           >
             <p>
-              Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. 
-              Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!
-            </p>
-            <p>
               Tình yêu không phải là tìm thấy một người hoàn hảo, mà là học cách nhìn thấy những điều tuyệt vời từ một người không hoàn hảo. 
               Chúng tôi đã cùng nhau đi qua những cung bậc cảm xúc, từ những rung động đầu tiên đến lời hẹn ước trọn đời.
             </p>
@@ -50,12 +54,15 @@ export const StorySection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative w-full max-w-4xl mx-auto"
+            className="relative w-full max-w-6xl mx-auto"
           >
-            <div className="relative aspect-[16/10] md:aspect-[21/9] rounded-t-full overflow-hidden border-[8px] border-white shadow-2xl">
+            <div 
+                onClick={() => setSelectedImage("/images/chuyen chung minh 2.JPG")}
+                className="relative aspect-[16/10] md:aspect-[3/2] rounded-t-[300px] overflow-hidden border-[8px] border-white shadow-2xl cursor-pointer"
+            >
               <img 
-                src="/images/chuyen chung minh.JPG" 
-                className="w-full h-full object-cover" 
+                src="/images/chuyen chung minh 2.JPG" 
+                className="w-full h-full object-cover object-top" 
                 alt="Chuyện chúng mình" 
               />
             </div>

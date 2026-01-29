@@ -5,19 +5,19 @@ const milestones = [
     title: "Lần đầu gặp nhau",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2023",
-    image: "/images/image-02.png", // Reusing existing assets
+    image: "/images/cot moc 01.JPG", // Reusing existing assets
   },
   {
     title: "Chuyến đi đầu tiên",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2024",
-    image: "/images/image-03.png",
+    image: "/images/cot moc 02.JPG",
   },
   {
     title: "Hẹn ước trọn đời",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2025",
-    image: "/images/image-04.png",
+    image: "/images/cot moc 03.JPG",
   }
 ]
 
@@ -46,7 +46,7 @@ export const Milestones = () => {
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subtle overlay gradient to tie image and text together if needed */}
                   <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-white/20 to-transparent"></div>

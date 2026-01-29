@@ -1,24 +1,27 @@
 import { motion } from 'framer-motion'
+import * as React from "react"
+import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 const images = [
-  '/images/image-01.png',
-  '/images/image-02.png',
-  '/images/image-03.png',
-  '/images/image-04.png',
-  '/images/image-05.png',
-  '/images/image-01.png', // Repeat or find another for 2x3
+  '/images/album-01.JPG',
+  '/images/album-02.JPG',
+  '/images/album-03.JPG',
+  '/images/album-04.JPG',
+  '/images/album-05.JPG',
+  '/images/album-06.JPG', // Repeat or find another for 2x3
 ]
 
 export const Album = () => {
+    const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
+
     return (
         <section id="album" className="py-24 bg-white relative overflow-hidden">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 left-0 w-[150px] md:w-[250px] pointer-events-none opacity-40">
-                <img src="/images/top-flower.png" className="w-full h-auto" alt="" />
-            </div>
-            <div className="absolute bottom-0 right-0 w-[150px] md:w-[250px] pointer-events-none opacity-40">
-                <img src="/images/right-flower.png" className="w-full h-auto" alt="" />
-            </div>
+            {/* ... simplified for chunk ... */}
+            <ImageLightbox 
+                src={selectedImage} 
+                isOpen={!!selectedImage} 
+                onClose={() => setSelectedImage(null)} 
+            />
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
@@ -40,7 +43,8 @@ export const Album = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="aspect-[4/5] rounded-lg overflow-hidden border-[6px] border-white shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group"
+                        onClick={() => setSelectedImage(src)}
+                        className="aspect-[4/5] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group"
                     >
                         <img 
                             src={src} 

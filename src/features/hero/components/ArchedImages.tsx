@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion'
-// import { ArrowUpRight } from 'lucide-react' // Removed unused
+import * as React from "react"
+import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 export const ArchedImages = () => {
+    const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
     return (
         <section className="py-20 bg-[#FFF9F6] overflow-hidden relative min-h-[800px] flex items-center justify-center">
+            <ImageLightbox 
+                src={selectedImage} 
+                isOpen={!!selectedImage} 
+                onClose={() => setSelectedImage(null)} 
+            />
             
             {/* Large Vertical GROOM Text - Far Left */}
             <div className="absolute left-2 md:left-10 top-1/2 -translate-y-1/2 z-0 hidden md:block">
@@ -32,8 +39,11 @@ export const ArchedImages = () => {
                         className="flex flex-col items-center space-y-4 md:space-y-6"
                     >   
                          {/* Image */}
-                         <div className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl">
-                            <img src="/images/image-02.png" className="w-full h-full object-cover scale-x-[-1]" alt="Groom" />
+                         <div 
+                            onClick={() => setSelectedImage("/images/chu re.JPG")}
+                            className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl cursor-pointer"
+                         >
+                            <img src="/images/chu re.JPG" className="w-full h-full object-cover scale-x-[-1]" alt="Groom" />
                          </div>
 
                         {/* Text Below */}
@@ -62,8 +72,11 @@ export const ArchedImages = () => {
                         className="flex flex-col items-center space-y-4 md:space-y-6"
                     >
                          {/* Image */}
-                         <div className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl">
-                            <img src="/images/image-03.png" className="w-full h-full object-cover" alt="Bride" />
+                         <div 
+                            onClick={() => setSelectedImage("/images/co dau.JPG")}
+                            className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl cursor-pointer"
+                         >
+                            <img src="/images/co dau.JPG" className="w-full h-full object-cover" alt="Bride" />
                          </div>
 
                          {/* Text Below */}

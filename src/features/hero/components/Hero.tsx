@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
+import * as React from "react"
+import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 export const Hero = () => {
+    const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
   return (
     <div className="relative bg-[#FFF9F6] min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <ImageLightbox 
+          src={selectedImage} 
+          isOpen={!!selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+      />
       
       <div className="container mx-auto px-4 relative z-20 grid lg:grid-cols-2 gap-4 lg:gap-12 items-center h-full w-full max-w-7xl">
         
@@ -52,21 +60,27 @@ export const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            className="relative h-[450px] lg:h-[600px] w-full mt-12 lg:mt-0 max-w-[400px] lg:max-w-none mx-auto lg:mx-0"
+            className="relative h-[450px] lg:h-[700px] w-full mt-12 lg:mt-0 max-w-[400px] lg:max-w-none mx-auto lg:mx-0"
         >
             {/* Main Image (Back - Arch) */}
-            <div className="absolute top-0 lg:top-10 left-4 lg:left-auto lg:right-20 w-[260px] h-[380px] lg:w-[380px] lg:h-[550px] rounded-t-full overflow-hidden shadow-2xl border-4 lg:border-8 border-white z-10">
+            <div 
+                onClick={() => setSelectedImage("/images/chung toi cuoi 3.JPG")}
+                className="absolute top-0 lg:top-10 left-4 lg:left-auto lg:right-48 w-[260px] h-[380px] lg:w-[450px] lg:h-[650px] rounded-t-full overflow-hidden shadow-2xl z-10 cursor-pointer"
+            >
                 <img 
-                    src="/images/image-04.png" 
+                    src="/images/chung toi cuoi 3.JPG" 
                     alt="Bride" 
                     className="w-full h-full object-cover"
                 />
             </div>
 
             {/* Secondary Image (Front - Arch - Bottom Right) */}
-             <div className="absolute bottom-0 right-4 lg:right-0 w-[180px] h-[260px] lg:w-[260px] lg:h-[380px] rounded-t-full overflow-hidden shadow-2xl border-4 lg:border-8 border-white z-20">
+             <div 
+                onClick={() => setSelectedImage("/images/chung toi cuoi 4.JPG ")}
+                className="absolute bottom-0 right-4 lg:right-0 w-[180px] h-[260px] lg:w-[260px] lg:h-[380px] rounded-t-full overflow-hidden shadow-2xl z-20 cursor-pointer"
+             >
                 <img 
-                    src="/images/image-01.png" 
+                    src="/images/chung toi cuoi 4.JPG " 
                     alt="Couple" 
                      className="w-full h-full object-cover"
                 />
