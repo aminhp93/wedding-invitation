@@ -26,7 +26,7 @@ export const Milestones = () => {
     <section className="py-24 bg-[#FCF9F6] text-stone-800 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-serif text-[#8B4513] italic">Chuyện chúng mình</h2>
+          <h2 className="text-5xl md:text-6xl text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Chuyện chúng mình</h2>
           <p className="text-stone-400 font-serif tracking-[0.3em] uppercase text-xs">Cột mốc</p>
         </div>
         

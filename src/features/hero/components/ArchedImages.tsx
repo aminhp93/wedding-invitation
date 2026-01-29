@@ -1,44 +1,91 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+// import { ArrowUpRight } from 'lucide-react' // Removed unused
 
 export const ArchedImages = () => {
     return (
-        <section className="py-20 bg-white overflow-hidden">
-            <div className="container mx-auto px-4 relative flex items-center justify-center">
-                {/* Right Side: Double Arched Images */}
-                <div className="relative w-full h-[500px] md:h-[650px] max-w-4xl flex items-center justify-center">
+        <section className="py-20 bg-[#FFF9F6] overflow-hidden relative min-h-[800px] flex items-center justify-center">
+            
+            {/* Large Vertical GROOM Text - Far Left */}
+            <div className="absolute left-2 md:left-10 top-1/2 -translate-y-1/2 z-0 hidden md:block">
+                <span className="font-serif text-[#E8D7D0] text-[80px] md:text-[140px] leading-none tracking-widest opacity-60 select-none" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    GROOM
+                </span>
+            </div>
+
+            {/* Large Vertical BRIDE Text - Far Right */}
+            <div className="absolute right-2 md:right-10 top-1/2 -translate-y-1/2 z-0 hidden md:block">
+                <span className="font-serif text-[#E8D7D0] text-[80px] md:text-[140px] leading-none tracking-widest opacity-60 select-none" style={{ writingMode: 'vertical-rl' }}>
+                    BRIDE
+                </span>
+            </div>
+
+            <div className="container mx-auto px-4 relative z-10">
+                {/* Double Arched Images Side-by-Side - Design 5 */}
+                <div className="w-full max-w-5xl mx-auto flex justify-center items-start gap-4 md:gap-8">
                     
-                    {/* Background Circle Element */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] border border-stone-200 rounded-full opacity-20 pointer-events-none scale-y-110"></div>
-
-                    {/* Main Arch Image */}
+                    {/* Groom Section */}
                     <motion.div 
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2 }}
-                    viewport={{ once: true }}
-                    className="relative z-10 w-[280px] md:w-[420px] h-[400px] md:h-[600px] rounded-t-full border-[12px] border-white shadow-2xl overflow-hidden"
-                    >
-                    <img src="/images/image-03.png" className="w-full h-full object-cover" alt="Main couple" />
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col items-center space-y-4 md:space-y-6"
+                    >   
+                         {/* Image */}
+                         <div className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl">
+                            <img src="/images/image-02.png" className="w-full h-full object-cover scale-x-[-1]" alt="Groom" />
+                         </div>
+
+                        {/* Text Below */}
+                        <div className="text-center space-y-4 flex flex-col items-center relative">
+                             <p className="font-serif text-[#5c5c5c] text-lg md:text-xl">Chú rể</p> 
+                             
+                             {/* Name with Flower Background */}
+                             <div className="relative">
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 md:w-48 opacity-60 -z-10">
+                                     <img src="/images/right-flower.png" className="w-full h-full object-contain rotate-12" alt="" />
+                                </div>
+                                <h3 className="text-4xl md:text-6xl text-[#A03D1A] flex flex-col gap-1 leading-[0.9]" style={{ fontFamily: '"Pinyon Script", cursive' }}>
+                                    <span>Ngọc</span>
+                                    <span>Minh</span>
+                                </h3>
+                             </div>
+                        </div>
                     </motion.div>
 
-                    {/* Small Overlapping Arch Image */}
+                    {/* Bride Section */}
                     <motion.div 
-                    initial={{ opacity: 0, x: 50, y: 30 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    className="absolute right-0 bottom-0 z-20 w-[180px] md:w-[280px] h-[220px] md:h-[350px] rounded-t-full border-[10px] border-white shadow-2xl overflow-hidden"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="flex flex-col items-center space-y-4 md:space-y-6"
                     >
-                    <img src="/images/image-04.png" className="w-full h-full object-cover" alt="Couple smile" />
+                         {/* Image */}
+                         <div className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl">
+                            <img src="/images/image-03.png" className="w-full h-full object-cover" alt="Bride" />
+                         </div>
+
+                         {/* Text Below */}
+                        <div className="text-center space-y-4 flex flex-col items-center relative">
+                            <p className="font-serif text-[#5c5c5c] text-lg md:text-xl">Cô dâu</p>
+                            
+                            {/* Name with Flower Background */}
+                            <div className="relative">
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 md:w-48 opacity-60 -z-10">
+                                     <img src="/images/right-flower.png" className="w-full h-full object-contain -rotate-12 scale-x-[-1]" alt="" />
+                                </div>
+                                <h3 className="text-4xl md:text-6xl text-[#A03D1A] flex flex-col gap-1 leading-[0.9]" style={{ fontFamily: '"Pinyon Script", cursive' }}>
+                                    <span>Linh</span>
+                                    <span>Nhi</span>
+                                </h3>
+                            </div>
+                        </div>
                     </motion.div>
 
-                    {/* Decorative Icon Button */}
-                    <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-3 rounded-xl shadow-lg z-30 opacity-70">
-                        <ArrowUpRight size={24} className="text-stone-800" />
-                    </div>
                 </div>
             </div>
         </section>
     )
 }
+
