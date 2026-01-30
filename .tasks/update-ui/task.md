@@ -1,9 +1,8 @@
 - Su kien
-    - su dia chi, ngay gio
-    - lam chi duong, them vao lich
-- Mung cuoi
-    - update lai anh 
-- icon bottom left: on/off bat nhac
+    - sua ngay gio an hoi: update dia chi giong don dau
+    - lam chi duong: open new tab with google map address
+    - them vao lich: dung google only. make it working
+- icon bottom left: on/off bat nhac: bai hat "nguyen cau den 50 nam ve sau"
 - icon bottom right: quick icon de scroll den 3 action
     - gui loi chuc
     - xac nhan tham du

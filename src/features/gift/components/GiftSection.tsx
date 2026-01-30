@@ -30,7 +30,7 @@ export const GiftSection = () => {
                     <div className="flex-shrink-0 w-80 h-[480px] relative z-20">
                         <div className="w-full h-full rounded-t-full border-[8px] border-white shadow-2xl overflow-hidden">
                             <img 
-                                src="/images/image-05.png" 
+                                src="/images/mung cuoi.jpg" 
                                 alt="Couple" 
                                 className="w-full h-full object-cover" 
                             />

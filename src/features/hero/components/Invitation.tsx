@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export const Invitation = () => {
     return (
-        <section className="py-20 bg-white">
+        <section id="invitation" className="py-20 bg-white">
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -8,8 +8,9 @@ const events = [
     title: "ĂN HỎI",
     time: "10:00 AM",
     date: "21 | 02 | 2026",
-    address: "Nhà riêng: Tại số 62B Kiều Sơn, Hải An, Hải Phòng",
+    address: "Nhà riêng: Tại Chùa gần Đồng Sau, Đồng Sơn, Thành phố Bắc Giang, Tỉnh Bắc Giang",
     icon: "/images/icon-rings.png", 
+    mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
   },
   {
     title: "ĐÓN DÂU",
@@ -17,6 +18,7 @@ const events = [
     date: "28 | 02 | 2026",
     address: "Nhà riêng: Tại Chùa gần Đồng Sau, Đồng Sơn, Thành phố Bắc Giang, Tỉnh Bắc Giang",
     icon: "/images/icon-car.png",
+    mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
   },
   {
     title: "TIỆC CƯỚI",
@@ -24,15 +26,21 @@ const events = [
     date: "07 | 03 | 2026",
     address: "TRUNG TÂM TIỆC CƯỚI W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",
+    mapLink: "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BB%87c+c%C6%B0%E1%BB%9Bi+W.JARDIN/@20.8407481,106.6669986,17z/data=!3m1!4b1!4m6!3m5!1s0x314a7af2760f38df:0x9da9d68b2098674c!8m2!3d20.8407481!4d106.6669986!16s%2Fg%2F11h9026n6w"
   }
 ]
 
 export const Events = () => {
   const [isCalendarOpen, setIsCalendarOpen] = React.useState(false)
+  const [selectedEvent, setSelectedEvent] = React.useState<typeof events[0] | null>(null)
 
   return (
     <section className="py-24 bg-[#FCF9F6] border-t border-stone-100">
-      <CalendarDialog open={isCalendarOpen} onOpenChange={setIsCalendarOpen} />
+      <CalendarDialog 
+        open={isCalendarOpen} 
+        onOpenChange={setIsCalendarOpen} 
+        event={selectedEvent}
+      />
       <div className="container mx-auto px-4">
         <h2 className="text-5xl md:text-6xl text-center mb-24 text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Sự kiện</h2>
         
@@ -73,12 +81,19 @@ export const Events = () => {
                 </p>
 
                 <div className="flex gap-4">
-                  <Button variant="outline" className="border-[#8B4513] text-[#8B4513] hover:bg-[#8B3513] hover:text-white rounded-none px-6 shadow-none">
+                  <Button 
+                    variant="outline" 
+                    className="border-[#8B4513] text-[#8B4513] hover:bg-[#8B3513] hover:text-white rounded-none px-6 shadow-none"
+                    onClick={() => window.open(event.mapLink, '_blank')}
+                  >
                     CHỈ ĐƯỜNG
                   </Button>
                   <Button 
                     variant="secondary"
-                    onClick={() => setIsCalendarOpen(true)}
+                    onClick={() => {
+                        setSelectedEvent(event)
+                        setIsCalendarOpen(true)
+                    }}
                     className="bg-[#F5E6DA] text-[#8B4513] hover:bg-[#EEDDCC] rounded-none px-6 shadow-none"
                   >
                     THÊM VÀO LỊCH
