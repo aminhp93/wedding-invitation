@@ -1,0 +1,12 @@
+- Su kien
+    - su dia chi, ngay gio
+    - lam chi duong, them vao lich
+- Mung cuoi
+    - update lai anh 
+- icon bottom left: on/off bat nhac
+- icon bottom right: quick icon de scroll den 3 action
+    - gui loi chuc
+    - xac nhan tham du
+    - moi cuoi
+- ui chung
+    - sua font size + do nghieng
