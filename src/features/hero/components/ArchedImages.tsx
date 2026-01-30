@@ -40,10 +40,10 @@ export const ArchedImages = () => {
                     >   
                          {/* Image */}
                          <div 
-                            onClick={() => setSelectedImage("/images/chu re.JPG")}
+                            onClick={() => setSelectedImage("/images/chu re.jpg")}
                             className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl cursor-pointer"
                          >
-                            <img src="/images/chu re.JPG" className="w-full h-full object-cover scale-x-[-1]" alt="Groom" />
+                            <img src="/images/chu re.jpg" className="w-full h-full object-cover scale-x-[-1]" alt="Groom" />
                          </div>
 
                         {/* Text Below */}
@@ -73,10 +73,10 @@ export const ArchedImages = () => {
                     >
                          {/* Image */}
                          <div 
-                            onClick={() => setSelectedImage("/images/co dau.JPG")}
+                            onClick={() => setSelectedImage("/images/co dau.jpg")}
                             className="relative w-[48vw] max-w-[280px] h-[400px] md:h-[550px] rounded-t-full overflow-hidden border-[2px] border-[#A03D1A] shadow-xl cursor-pointer"
                          >
-                            <img src="/images/co dau.JPG" className="w-full h-full object-cover" alt="Bride" />
+                            <img src="/images/co dau.jpg" className="w-full h-full object-cover" alt="Bride" />
                          </div>
 
                          {/* Text Below */}

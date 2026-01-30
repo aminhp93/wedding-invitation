@@ -3,12 +3,12 @@ import * as React from "react"
 import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 const images = [
-  '/images/album-01.JPG',
-  '/images/album-02.JPG',
-  '/images/album-03.JPG',
-  '/images/album-04.JPG',
-  '/images/album-05.JPG',
-  '/images/album-06.JPG', // Repeat or find another for 2x3
+  '/images/album-01.jpg',
+  '/images/album-02.jpg',
+  '/images/album-03.jpg',
+  '/images/album-04.jpg',
+  '/images/album-05.jpg',
+  '/images/album-06.jpg', // Repeat or find another for 2x3
 ]
 
 export const Album = () => {

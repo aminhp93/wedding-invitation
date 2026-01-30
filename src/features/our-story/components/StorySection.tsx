@@ -57,11 +57,11 @@ export const StorySection = () => {
             className="relative w-full max-w-6xl mx-auto"
           >
             <div 
-                onClick={() => setSelectedImage("/images/chuyen chung minh 2.JPG")}
+                onClick={() => setSelectedImage("/images/chuyen chung minh 2.jpg")}
                 className="relative aspect-[16/10] md:aspect-[3/2] rounded-t-[300px] overflow-hidden border-[8px] border-white shadow-2xl cursor-pointer"
             >
               <img 
-                src="/images/chuyen chung minh 2.JPG" 
+                src="/images/chuyen chung minh 2.jpg" 
                 className="w-full h-full object-cover object-top" 
                 alt="Chuyện chúng mình" 
               />

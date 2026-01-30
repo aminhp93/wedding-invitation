@@ -64,11 +64,11 @@ export const Hero = () => {
         >
             {/* Main Image (Back - Arch) */}
             <div 
-                onClick={() => setSelectedImage("/images/chung toi cuoi 3.JPG")}
+                onClick={() => setSelectedImage("/images/chung toi cuoi 3.jpg")}
                 className="absolute top-0 lg:top-10 left-4 lg:left-auto lg:right-48 w-[260px] h-[380px] lg:w-[450px] lg:h-[650px] rounded-t-full overflow-hidden shadow-2xl z-10 cursor-pointer"
             >
                 <img 
-                    src="/images/chung toi cuoi 3.JPG" 
+                    src="/images/chung toi cuoi 3.jpg" 
                     alt="Bride" 
                     className="w-full h-full object-cover"
                 />
@@ -76,11 +76,11 @@ export const Hero = () => {
 
             {/* Secondary Image (Front - Arch - Bottom Right) */}
              <div 
-                onClick={() => setSelectedImage("/images/chung toi cuoi 4.JPG ")}
+                onClick={() => setSelectedImage("/images/chung toi cuoi 4.jpg ")}
                 className="absolute bottom-0 right-4 lg:right-0 w-[180px] h-[260px] lg:w-[260px] lg:h-[380px] rounded-t-full overflow-hidden shadow-2xl z-20 cursor-pointer"
              >
                 <img 
-                    src="/images/chung toi cuoi 4.JPG " 
+                    src="/images/chung toi cuoi 4.jpg " 
                     alt="Couple" 
                      className="w-full h-full object-cover"
                 />

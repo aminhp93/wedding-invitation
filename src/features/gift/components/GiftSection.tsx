@@ -18,7 +18,7 @@ export const GiftSection = () => {
                         <div className="flex items-center gap-6">
                             <div className="w-32 h-40 bg-white shadow-md rounded-lg overflow-hidden border border-stone-100 p-1 flex items-center justify-center">
                                 <img 
-                                    src="/images/ngan hang chu re.JPG" 
+                                    src="/images/ngan hang chu re.jpg" 
                                     className="w-full h-full object-contain" 
                                     alt="QR Chú rể" 
                                 />

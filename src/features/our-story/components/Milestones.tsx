@@ -5,19 +5,19 @@ const milestones = [
     title: "Lần đầu gặp nhau",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2023",
-    image: "/images/cot moc 01.JPG", // Reusing existing assets
+    image: "/images/cot moc 01.jpg", // Reusing existing assets
   },
   {
     title: "Chuyến đi đầu tiên",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2024",
-    image: "/images/cot moc 02.JPG",
+    image: "/images/cot moc 02.jpg",
   },
   {
     title: "Hẹn ước trọn đời",
     description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
     date: "18 | 09 | 2025",
-    image: "/images/cot moc 03.JPG",
+    image: "/images/cot moc 03.jpg",
   }
 ]
 
