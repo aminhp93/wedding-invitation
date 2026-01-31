@@ -46,7 +46,7 @@ export function RsvpDialog({
   open, 
   onOpenChange, 
   eventType = "wedding", 
-  eventDateLabel = "Tiệc rượu chung vui — 11h00, 07/03/2026" 
+  eventDateLabel = "Tiệc rượu chung vui — 10h00, 07/03/2026" 
 }: RsvpDialogProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
@@ -89,7 +89,7 @@ export function RsvpDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px] bg-[#FCF9F6] border-none shadow-2xl p-0 overflow-hidden">
         <DialogHeader className="pt-12 pb-6 px-6 bg-white flex flex-col items-center">
-          <DialogTitle className="text-4xl md:text-5xl font-serif italic text-[#A03D1A] text-center mb-2">
+          <DialogTitle className="text-3xl md:text-4xl font-serif italic text-[#A03D1A] text-center mb-2">
             Xác nhận tham dự
           </DialogTitle>
         </DialogHeader>
