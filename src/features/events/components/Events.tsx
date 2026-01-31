@@ -8,7 +8,7 @@ const events = [
     title: "ĂN HỎI",
     time: "10:00 AM",
     date: "21 | 02 | 2026",
-    address: "Nhà riêng: Tại Chùa gần Đồng Sau, Đồng Sơn, Thành phố Bắc Giang, Tỉnh Bắc Giang",
+    address: "Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh",
     icon: "/images/icon-rings.png", 
     mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
   },
@@ -16,7 +16,7 @@ const events = [
     title: "ĐÓN DÂU",
     time: "08:00 AM",
     date: "28 | 02 | 2026",
-    address: "Nhà riêng: Tại Chùa gần Đồng Sau, Đồng Sơn, Thành phố Bắc Giang, Tỉnh Bắc Giang",
+    address: "Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh",
     icon: "/images/icon-car.png",
     mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
   },

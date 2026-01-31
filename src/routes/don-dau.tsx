@@ -62,7 +62,14 @@ function DonDau() {
       <Invitation />
 
       {/* 3. thoi gian - dia diem */}
-      <DateTimeLocation />
+      <DateTimeLocation 
+        timeLine="08:00, Thứ Bảy"
+        day="28"
+        month="02"
+        year="2026"
+        locationName="LỄ ĐÓN DÂU"
+        address="Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh"
+      />
 
       {/* 4. gui loi chuc - xac nhan tham du */}
       <HeroActionButtons onRsvpTrigger={() => setIsRsvpOpen(true)} />
