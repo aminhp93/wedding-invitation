@@ -79,6 +79,26 @@ function Index() {
       {/* 11. mung cuoi */}
       <GiftSection />
       
+      {/* 12. thiệp mời chi tiết */}
+      <section className="bg-[#FCF9F6] pt-12 pb-24">
+        <div className="max-w-4xl mx-auto px-4 space-y-8">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl bg-white p-2">
+            <img 
+              src="/images/invitation-detail-1.jpg" 
+              alt="Invitation Detail 1" 
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-xl bg-white p-2">
+            <img 
+              src="/images/invitation-detail-2.jpg" 
+              alt="Invitation Detail 2" 
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+        </div>
+      </section>
+      
       <footer className="py-12 bg-white text-stone-400 text-center text-sm font-light">
         <p className="uppercase tracking-[0.3em] mb-4">Wedding Celebration</p>
         <p>© 2026. All Rights Reserved.</p>
