@@ -76,7 +76,7 @@ export const Events = () => {
                     {event.time} — {event.date}
                 </div>
 
-                <p className="text-stone-500 font-light text-sm mb-8 px-4 max-w-[240px]">
+                <p className="text-stone-500 font-light text-sm mb-8 px-4 max-w-[260px]">
                     {event.address}
                 </p>
 

@@ -3,20 +3,20 @@ import { motion } from 'framer-motion'
 const milestones = [
   {
     title: "Lần đầu gặp nhau",
-    description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
-    date: "18 | 09 | 2023",
-    image: "/images/cot moc 01.jpg", // Reusing existing assets
+    description: "Khoảnh khắc định mệnh khi hai tâm hồn tìm thấy nhau giữa dòng đời hối hả.",
+    date: "22 | 02 | 2022",
+    image: "/images/cot moc 01.jpg",
   },
   {
     title: "Chuyến đi đầu tiên",
-    description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
-    date: "18 | 09 | 2024",
+    description: "Cùng nhau đi đến những chân trời mới, dệt nên những kỷ niệm ngọt ngào nhất.",
+    date: "10 | 03 | 2023",
     image: "/images/cot moc 02.jpg",
   },
   {
     title: "Hẹn ước trọn đời",
-    description: "Mỗi lời chúc phúc và sự hiện diện của bạn trong ngày đặc biệt này chính là món quà vô giá với chúng tôi. Hãy cùng chúng tôi tận hưởng niềm vui, tiếng cười và sự ấm áp trong ngày hạnh phúc nhất này!",
-    date: "18 | 09 | 2025",
+    description: "Giây phút thiêng liêng khi lời hứa trăm năm được trao đi, bắt đầu một hành trình mới.",
+    date: "25 | 10 | 2025",
     image: "/images/cot moc 03.jpg",
   }
 ]
