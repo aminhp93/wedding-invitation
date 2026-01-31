@@ -2,7 +2,13 @@ import { motion } from 'framer-motion'
 import * as React from "react"
 import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
-export const Hero = () => {
+interface HeroProps {
+  day?: string;
+  month?: string;
+  year?: string;
+}
+
+export const Hero = ({ day = "07", month = "03", year = "2026" }: HeroProps) => {
     const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
   return (
     <div className="relative bg-[#FFF9F6] min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -42,15 +48,15 @@ export const Hero = () => {
                  className="flex items-center gap-4 md:gap-8 mt-12 select-none"
             >
                 <div className="text-center">
-                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">07</span>
+                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">{day}</span>
                 </div>
                 <div className="w-px h-16 md:h-24 bg-[rgb(244,219,206)]"></div>
                 <div className="text-center">
-                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">03</span>
+                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">{month}</span>
                 </div>
                 <div className="w-px h-16 md:h-24 bg-[rgb(244,219,206)]"></div>
                 <div className="text-center">
-                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">2026</span>
+                    <span className="block text-5xl md:text-7xl lg:text-[80px] font-serif text-[rgb(244,219,206)] font-light tracking-tighter">{year}</span>
                 </div>
             </motion.div>
         </div>

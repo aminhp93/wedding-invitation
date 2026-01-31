@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThiepRouteImport } from './routes/thiep'
+import { Route as AnHoiRouteImport } from './routes/an-hoi'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ThiepRoute = ThiepRouteImport.update({
   id: '/thiep',
   path: '/thiep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnHoiRoute = AnHoiRouteImport.update({
+  id: '/an-hoi',
+  path: '/an-hoi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/an-hoi': typeof AnHoiRoute
   '/thiep': typeof ThiepRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/an-hoi': typeof AnHoiRoute
   '/thiep': typeof ThiepRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/an-hoi': typeof AnHoiRoute
   '/thiep': typeof ThiepRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/thiep'
+  fullPaths: '/' | '/an-hoi' | '/thiep'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/thiep'
-  id: '__root__' | '/' | '/thiep'
+  to: '/' | '/an-hoi' | '/thiep'
+  id: '__root__' | '/' | '/an-hoi' | '/thiep'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnHoiRoute: typeof AnHoiRoute
   ThiepRoute: typeof ThiepRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/thiep'
       fullPath: '/thiep'
       preLoaderRoute: typeof ThiepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/an-hoi': {
+      id: '/an-hoi'
+      path: '/an-hoi'
+      fullPath: '/an-hoi'
+      preLoaderRoute: typeof AnHoiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnHoiRoute: AnHoiRoute,
   ThiepRoute: ThiepRoute,
 }
 export const routeTree = rootRouteImport
