@@ -16,11 +16,11 @@ import * as React from 'react'
 import { MusicPlayer } from '@/components/MusicPlayer'
 import { AnimatePresence, motion } from 'framer-motion'
 
-export const Route = createFileRoute('/an-hoi')({
-  component: AnHoi,
+export const Route = createFileRoute('/don-dau')({
+  component: DonDau,
 })
 
-function AnHoi() {
+function DonDau() {
   const [isRsvpOpen, setIsRsvpOpen] = React.useState(false)
   const [isMusicPlaying, setIsMusicPlaying] = React.useState(false)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
@@ -55,7 +55,7 @@ function AnHoi() {
         </a>
       </header>
 
-      {/* 1. Chung toi cuoi - Specific date for An Hoi */}
+      {/* 1. Chung toi cuoi - Specific date for Don Dau */}
       <Hero day="28" month="02" year="2026" />
       
       {/* 2. tran trong kinh moi */}
