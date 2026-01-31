@@ -53,7 +53,14 @@ function Index() {
       <Invitation />
 
       {/* 3. thoi gian - dia diem */}
-      <DateTimeLocation />
+      <DateTimeLocation 
+        timeLine="10:00, Thứ Bảy"
+        day="07"
+        month="03"
+        year="2026"
+        locationName="LỄ THÀNH HÔN"
+        address="Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng"
+      />
 
       {/* 4. gui loi chuc - xac nhan tham du */}
       <HeroActionButtons onRsvpTrigger={() => setIsRsvpOpen(true)} />
