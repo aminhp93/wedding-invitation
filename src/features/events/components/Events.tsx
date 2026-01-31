@@ -24,7 +24,7 @@ const events = [
     title: "TIỆC CƯỚI",
     time: "10:00 AM",
     date: "07 | 03 | 2026",
-    address: "TRUNG TÂM TIỆC CƯỚI W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
+    address: "W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",
     mapLink: "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BB%87c+c%C6%B0%E1%BB%9Bi+W.JARDIN/@20.8407481,106.6669986,17z/data=!3m1!4b1!4m6!3m5!1s0x314a7af2760f38df:0x9da9d68b2098674c!8m2!3d20.8407481!4d106.6669986!16s%2Fg%2F11h9026n6w"
   }

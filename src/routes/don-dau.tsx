@@ -67,7 +67,7 @@ function DonDau() {
         day="28"
         month="02"
         year="2026"
-        locationName="LỄ ĐÓN DÂU"
+        locationName="LỄ VU QUY"
         address="Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh"
       />
 

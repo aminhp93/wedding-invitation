@@ -59,7 +59,7 @@ function Index() {
         month="03"
         year="2026"
         locationName="LỄ THÀNH HÔN"
-        address="Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng"
+        address="W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng"
       />
 
       {/* 4. gui loi chuc - xac nhan tham du */}
