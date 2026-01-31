@@ -35,7 +35,12 @@ function DonDau() {
 
   return (
     <div className="min-h-screen bg-[#FCF9F6] text-stone-900 font-sans selection:bg-[#F5E6DA] selection:text-[#8B4513]">
-      <RsvpDialog open={isRsvpOpen} onOpenChange={setIsRsvpOpen} />
+      <RsvpDialog 
+        open={isRsvpOpen} 
+        onOpenChange={setIsRsvpOpen} 
+        eventType="Lễ Vu Quy"
+        eventDateLabel="Lễ Vu Quy — 08h00, 28/02/2026"
+      />
       <MusicPlayer isPlaying={isMusicPlaying} onToggle={() => setIsMusicPlaying(!isMusicPlaying)} />
       
       {/* Decorative Corners */}

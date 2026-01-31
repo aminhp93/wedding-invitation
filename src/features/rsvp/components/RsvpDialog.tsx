@@ -38,9 +38,16 @@ const formSchema = z.object({
 interface RsvpDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
+  eventType?: string
+  eventDateLabel?: string
 }
 
-export function RsvpDialog({ open, onOpenChange }: RsvpDialogProps) {
+export function RsvpDialog({ 
+  open, 
+  onOpenChange, 
+  eventType = "wedding", 
+  eventDateLabel = "Tiệc rượu chung vui — 11h00, 07/03/2026" 
+}: RsvpDialogProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,7 +68,7 @@ export function RsvpDialog({ open, onOpenChange }: RsvpDialogProps) {
             name: values.name, 
             phone: values.phone, 
             party_size: values.partySize,
-            event_type: 'wedding'
+            event_type: eventType
           }
         ])
 
@@ -128,7 +135,7 @@ export function RsvpDialog({ open, onOpenChange }: RsvpDialogProps) {
 
               <div className="space-y-4 pt-2 pb-4">
                   <p className="text-stone-600 font-medium text-sm text-center">Sự kiện bạn sẽ tham gia</p>
-                  <p className="text-[#A03D1A] font-serif italic text-center">Tiệc rượu chung vui — 11h00, 07/03/2026</p>
+                  <p className="text-[#A03D1A] font-serif italic text-center text-sm md:text-base">{eventDateLabel}</p>
               </div>
 
               <FormField

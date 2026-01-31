@@ -35,7 +35,12 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-[#FCF9F6] text-stone-900 font-sans selection:bg-[#F5E6DA] selection:text-[#8B4513]">
-      <RsvpDialog open={isRsvpOpen} onOpenChange={setIsRsvpOpen} />
+      <RsvpDialog 
+        open={isRsvpOpen} 
+        onOpenChange={setIsRsvpOpen} 
+        eventType="Lễ Thành Hôn"
+        eventDateLabel="Tiệc rượu chung vui — 11h00, 07/03/2026"
+      />
       <MusicPlayer isPlaying={isMusicPlaying} onToggle={() => setIsMusicPlaying(!isMusicPlaying)} />
       
       {/* Decorative Corners (Abstract placeholders for now) */}
