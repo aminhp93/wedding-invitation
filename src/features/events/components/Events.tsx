@@ -22,7 +22,7 @@ const events = [
   },
   {
     title: "TIỆC CƯỚI",
-    time: "10:00 AM",
+    time: "11:00 AM",
     date: "07 | 03 | 2026",
     address: "W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",

@@ -10,7 +10,7 @@ interface DateTimeLocationProps {
 }
 
 export const DateTimeLocation = ({
-  timeLine = "10:00, Thứ Bảy",
+  timeLine = "11:00, Thứ Bảy",
   day = "07",
   month = "03",
   year = "2026",
