@@ -10,7 +10,7 @@ const events = [
     date: "21 | 02 | 2026",
     address: "Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh",
     icon: "/images/icon-rings.png", 
-    mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
+    mapLink: "https://www.google.com/maps/place/21%C2%B015'26.3%22N+106%C2%B011'50.9%22E/@21.2548437,106.1943371,17z/data=!4m7!1m2!2m1!1s2+51+Dong+Sau+Chua+Lane+Dong+Son+Bac+Giang+Bac+Giang+Vietnam!3m3!8m2!3d21.2573056!4d106.1974722?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     title: "ĐÓN DÂU",
@@ -18,7 +18,7 @@ const events = [
     date: "28 | 02 | 2026",
     address: "Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh",
     icon: "/images/icon-car.png",
-    mapLink: "https://www.google.com/maps/place/Ch%C3%B9a+Di%C3%AAn+Kh%C3%A1nh+-+Ch%C3%B9a+B%C3%BAn/@21.2582736,106.182414,17z/data=!3m1!4b1!4m6!3m5!1s0x3135096531853d45:0xe597b4700078027b!8m2!3d21.2582736!4d106.182414!16s%2Fg%2F11ghj7vj6q"
+    mapLink: "https://www.google.com/maps/place/21%C2%B015'26.3%22N+106%C2%B011'50.9%22E/@21.2548437,106.1943371,17z/data=!4m7!1m2!2m1!1s2+51+Dong+Sau+Chua+Lane+Dong+Son+Bac+Giang+Bac+Giang+Vietnam!3m3!8m2!3d21.2573056!4d106.1974722?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     title: "TIỆC CƯỚI",
@@ -26,7 +26,7 @@ const events = [
     date: "07 | 03 | 2026",
     address: "W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
     icon: "/images/icon-cake.png",
-    mapLink: "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BB%87c+c%C6%B0%E1%BB%9Bi+W.JARDIN/@20.8407481,106.6669986,17z/data=!3m1!4b1!4m6!3m5!1s0x314a7af2760f38df:0x9da9d68b2098674c!8m2!3d20.8407481!4d106.6669986!16s%2Fg%2F11h9026n6w"
+    mapLink: "https://www.google.com/maps/place/Trung+t%C3%A2m+ti%E1%BB%87c+c%C6%B0%E1%BB%9Bi+W.Jardin/@20.8357234,106.6837216,17z/data=!3m1!4b1!4m6!3m5!1s0x314a7b900f6e0d17:0x526fde7e0ed121fb!8m2!3d20.8357184!4d106.6863019!16s%2Fg%2F11t5nbtvnh?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D"
   }
 ]
 

@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import * as React from "react"
+import { ImageLightbox } from '@/components/ui/ImageLightbox'
 
 const milestones = [
   {
@@ -22,8 +24,15 @@ const milestones = [
 ]
 
 export const Milestones = () => {
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null)
+
   return (
     <section id="milestones" className="py-24 bg-white text-stone-800 relative overflow-hidden">
+      <ImageLightbox 
+          src={selectedImage} 
+          isOpen={!!selectedImage} 
+          onClose={() => setSelectedImage(null)} 
+      />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-5xl md:text-6xl text-[#A03D1A]" style={{ fontFamily: '"Pinyon Script", cursive' }}>Cột mốc</h2>
@@ -42,7 +51,10 @@ export const Milestones = () => {
             >
               {/* Unified Block: Image + Content */}
               <div className="space-y-6 flex flex-col items-center text-center">
-                <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-full">
+                <div 
+                  onClick={() => setSelectedImage(item.image)}
+                  className="relative w-full aspect-[4/5] overflow-hidden rounded-t-full cursor-pointer"
+                >
                   <img 
                     src={item.image} 
                     alt={item.title} 
