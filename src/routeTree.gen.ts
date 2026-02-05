@@ -9,15 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ThiepRouteImport } from './routes/thiep'
 import { Route as DonDauRouteImport } from './routes/don-dau'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ThiepRoute = ThiepRouteImport.update({
-  id: '/thiep',
-  path: '/thiep',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DonDauRoute = DonDauRouteImport.update({
   id: '/don-dau',
   path: '/don-dau',
@@ -32,42 +26,31 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
-  '/thiep': typeof ThiepRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
-  '/thiep': typeof ThiepRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
-  '/thiep': typeof ThiepRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/don-dau' | '/thiep'
+  fullPaths: '/' | '/don-dau'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/don-dau' | '/thiep'
-  id: '__root__' | '/' | '/don-dau' | '/thiep'
+  to: '/' | '/don-dau'
+  id: '__root__' | '/' | '/don-dau'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DonDauRoute: typeof DonDauRoute
-  ThiepRoute: typeof ThiepRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/thiep': {
-      id: '/thiep'
-      path: '/thiep'
-      fullPath: '/thiep'
-      preLoaderRoute: typeof ThiepRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/don-dau': {
       id: '/don-dau'
       path: '/don-dau'
@@ -88,7 +71,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DonDauRoute: DonDauRoute,
-  ThiepRoute: ThiepRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

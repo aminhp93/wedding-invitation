@@ -15,6 +15,7 @@ import { StorySection } from '@/features/our-story/components/StorySection'
 import * as React from 'react'
 import { MusicPlayer } from '@/components/MusicPlayer'
 import { AnimatePresence, motion } from 'framer-motion'
+import { CoverPage } from '@/components/CoverPage'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -24,6 +25,8 @@ function Index() {
   const [isRsvpOpen, setIsRsvpOpen] = React.useState(false)
   const [isMusicPlaying, setIsMusicPlaying] = React.useState(false)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
+  const [showCover, setShowCover] = React.useState(true)
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -35,6 +38,9 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-[#FCF9F6] text-stone-900 font-sans selection:bg-[#F5E6DA] selection:text-[#8B4513]">
+      <AnimatePresence>
+        {showCover && <CoverPage onOpen={() => setShowCover(false)} />}
+      </AnimatePresence>
       <RsvpDialog 
         open={isRsvpOpen} 
         onOpenChange={setIsRsvpOpen} 
