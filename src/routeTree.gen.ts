@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as DonDau2RouteImport } from './routes/don-dau-2'
 import { Route as DonDauRouteImport } from './routes/don-dau'
 import { Route as IndexRouteImport } from './routes/index'
 
+const DonDau2Route = DonDau2RouteImport.update({
+  id: '/don-dau-2',
+  path: '/don-dau-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DonDauRoute = DonDauRouteImport.update({
   id: '/don-dau',
   path: '/don-dau',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
+  '/don-dau-2': typeof DonDau2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
+  '/don-dau-2': typeof DonDau2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/don-dau': typeof DonDauRoute
+  '/don-dau-2': typeof DonDau2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/don-dau'
+  fullPaths: '/' | '/don-dau' | '/don-dau-2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/don-dau'
-  id: '__root__' | '/' | '/don-dau'
+  to: '/' | '/don-dau' | '/don-dau-2'
+  id: '__root__' | '/' | '/don-dau' | '/don-dau-2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DonDauRoute: typeof DonDauRoute
+  DonDau2Route: typeof DonDau2Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/don-dau-2': {
+      id: '/don-dau-2'
+      path: '/don-dau-2'
+      fullPath: '/don-dau-2'
+      preLoaderRoute: typeof DonDau2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/don-dau': {
       id: '/don-dau'
       path: '/don-dau'
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DonDauRoute: DonDauRoute,
+  DonDau2Route: DonDau2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

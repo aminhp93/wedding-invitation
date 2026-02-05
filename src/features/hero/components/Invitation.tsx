@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
 
-export const Invitation = () => {
+export const Invitation = ({
+    title="Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình có thêm một niềm hạnh&nbsp;phúc!",
+    
+}: {
+    title?: string
+}) => {
     return (
         <section id="invitation" className="py-20 bg-white">
             <motion.div 
@@ -12,7 +17,7 @@ export const Invitation = () => {
             >
                 <h2 className="text-3xl md:text-4xl font-serif text-[#A03D1A] italic">Trân trọng kính mời</h2>
                 <p className="text-stone-500 font-serif italic text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
-                    Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình có thêm một niềm hạnh&nbsp;phúc!
+                    {title}
                 </p>
                 <div className="w-16 h-px bg-stone-200 mx-auto"></div>
             </motion.div>

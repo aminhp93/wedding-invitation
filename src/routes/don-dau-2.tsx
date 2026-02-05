@@ -1,23 +1,19 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Hero } from '@/features/hero/components/Hero'
-import { Milestones } from '@/features/our-story/components/Milestones'
-import { Events } from '@/features/events/components/Events'
 import { Album } from '@/features/gallery/components/Album'
-import { GiftSection } from '@/features/gift/components/GiftSection'
-import { Guestbook } from '@/features/rsvp/components/Guestbook'
+import { Events } from '@/features/events/components/Events'
 import { Invitation } from '@/features/hero/components/Invitation'
 import { DateTimeLocation } from '@/features/hero/components/DateTimeLocation'
 import { HeroActionButtons } from '@/features/hero/components/HeroActionButtons'
 import { ArchedImages } from '@/features/hero/components/ArchedImages'
 import { RsvpDialog } from '@/features/rsvp/components/RsvpDialog'
 import { Music2, Menu, X, Heart, ClipboardCheck, Mail as MailIcon } from 'lucide-react'
-import { StorySection } from '@/features/our-story/components/StorySection'
 import * as React from 'react'
 import { MusicPlayer } from '@/components/MusicPlayer'
 import { AnimatePresence, motion } from 'framer-motion'
-import { CoverPage } from '@/components/CoverPage'
+import { CoverPage } from '@/components/CoverPage2'
 
-export const Route = createFileRoute('/don-dau')({
+export const Route = createFileRoute('/don-dau-2')({
   component: DonDau,
 })
 
@@ -61,7 +57,7 @@ function DonDau() {
       <Hero day="28" month="02" year="2026" />
       
       {/* 2. tran trong kinh moi */}
-      <Invitation />
+      <Invitation title="Sự hiện diện và lời chúc phúc của Quý vị là niềm vinh hạnh và niềm hạnh phúc lớn lao đối với gia đình chúng tôi." />
 
       {/* 3. thoi gian - dia diem */}
       <DateTimeLocation 
@@ -82,20 +78,8 @@ function DonDau() {
       {/* 6. album anh cuoi */}
       <Album />
 
-      {/* 7. Chuyện chúng mình */}
-      <StorySection />
-
-      {/* 8. Cột mốc */}
-      <Milestones />
-
-      {/* 9. Sự kiện */}
-      <Events />
-
-      {/* 10. so luu but */}
-      <Guestbook />
-
-      {/* 11. mung cuoi */}
-      <GiftSection />
+            {/* 9. Sự kiện */}
+            <Events />
 
       <footer className="py-12 bg-white text-stone-400 text-center text-sm font-light relative z-20">
         <p className="uppercase tracking-[0.3em] mb-4">Wedding Celebration</p>

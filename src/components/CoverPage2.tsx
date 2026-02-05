@@ -33,7 +33,7 @@ export function CoverPage({ onOpen, guestName = "Quý Khách" }: CoverPageProps)
         </h1>
         
         <p className="text-stone-600 mb-12 italic font-serif leading-relaxed">
-          Trân trọng kính mời tới dự bữa tiệc thân mật mừng lễ đính hôn của chúng tôi.
+          Trân trọng kính mời tới dự bữa tiệc thân mật mừng lễ đính hôn của hai con chúng tôi.
         </p>
 
         <Button 

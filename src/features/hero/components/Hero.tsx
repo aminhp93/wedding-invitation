@@ -27,9 +27,7 @@ export const Hero = ({ day = "07", month = "03", year = "2026" }: HeroProps) => 
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               className="text-center space-y-6 relative z-20"
-            >
-                <p className="text-stone-500 font-serif text-xs md:text-sm tracking-[0.4em] uppercase opacity-90">Chúng tôi cưới</p>
-                
+            >                
                 <div className="space-y-4">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl text-[#A03D1A] italic leading-none drop-shadow-sm flex flex-col items-center gap-2" style={{ fontFamily: '"Pinyon Script", cursive' }}>
                         <span className="block relative z-10">Ngọc Minh</span>

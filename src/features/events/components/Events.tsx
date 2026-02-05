@@ -14,7 +14,7 @@ const events = [
   },
   {
     title: "ĐÓN DÂU",
-    time: "08:00 AM",
+    time: "09:30 AM",
     date: "28 | 02 | 2026",
     address: "Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh",
     icon: "/images/icon-car.png",
