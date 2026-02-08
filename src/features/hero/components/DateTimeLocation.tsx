@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 interface DateTimeLocationProps {
   timeLine?: string;
   day?: string;
   month?: string;
   year?: string;
+  lunarDate?: string;
   locationName?: string;
   address?: string;
-  lunarDate?: string;
 }
 
 export const DateTimeLocation = ({
@@ -15,20 +15,28 @@ export const DateTimeLocation = ({
   day = "07",
   month = "03",
   year = "2026",
+  lunarDate = "(Nhằm ngày 12 tháng 01 năm Bính Ngọ)",
   locationName = "W.JARDIN (Sảnh 3)",
   address = "Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
-  lunarDate
 }: DateTimeLocationProps) => {
-    return (
-        <section className="py-24 bg-[#FFF9F6] relative overflow-hidden">
-            {/* Floral Corners */}
-            {/* Decorative Elements */}
-            <div className="absolute top-0 left-0 w-[150px] md:w-[250px] pointer-events-none opacity-90">
-                <img src="/images/top-flower.png" className="w-full h-auto object-contain" alt="" />
-            </div>
-            <div className="absolute bottom-0 right-0 w-[150px] md:w-[250px] pointer-events-none opacity-90">
-                <img src="/images/right-flower.png" className="w-full h-auto object-contain" alt="" />
-            </div>
+  return (
+    <section className="py-24 bg-[#FFF9F6] relative overflow-hidden">
+      {/* Floral Corners */}
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-0 w-[150px] md:w-[250px] pointer-events-none opacity-90">
+        <img
+          src="/images/top-flower.png"
+          className="w-full h-auto object-contain"
+          alt=""
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 w-[150px] md:w-[250px] pointer-events-none opacity-90">
+        <img
+          src="/images/right-flower.png"
+          className="w-full h-auto object-contain"
+          alt=""
+        />
+      </div>
 
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -53,11 +61,13 @@ export const DateTimeLocation = ({
                    )}
                 </div>
 
-                <div className="space-y-4">
-                    <p className="text-lg md:text-xl font-serif text-[#A03D1A] italic tracking-tight uppercase">{locationName}</p>
-                    <p className="text-stone-500 font-serif italic text-sm">{address}</p>
-                </div>
-            </motion.div>
-        </section>
-    )
-}
+        <div className="space-y-4">
+          <p className="text-lg md:text-xl font-serif text-[#A03D1A] italic tracking-tight uppercase">
+            {locationName}
+          </p>
+          <p className="text-stone-500 font-serif italic text-sm">{address}</p>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
