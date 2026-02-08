@@ -21,7 +21,7 @@ export const Hero = ({ day = "07", month = "03", year = "2026" }: HeroProps) => 
       <div className="container mx-auto px-4 relative z-20 grid lg:grid-cols-2 gap-4 lg:gap-12 items-center h-full w-full max-w-7xl">
         
         {/* Left Content: Text & Date */}
-        <div className="flex flex-col items-center justify-center space-y-12 pt-10 lg:pt-0 relative">
+        <div className="flex flex-col items-center justify-center space-y-12 pt-24 lg:pt-0 relative">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

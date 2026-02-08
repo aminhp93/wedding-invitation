@@ -41,7 +41,7 @@ function DonDau() {
         open={isRsvpOpen} 
         onOpenChange={setIsRsvpOpen} 
         eventType="Lễ Vu Quy"
-        eventDateLabel="Lễ Vu Quy — 08h00, 28/02/2026"
+        eventDateLabel="Đãi tiệc — 16h00, 28/02/2026"
       />
       <MusicPlayer isPlaying={isMusicPlaying} onToggle={() => setIsMusicPlaying(!isMusicPlaying)} />
       
@@ -57,16 +57,17 @@ function DonDau() {
       <Hero day="28" month="02" year="2026" />
       
       {/* 2. tran trong kinh moi */}
-      <Invitation title="Sự hiện diện và lời chúc phúc của Quý vị là niềm vinh hạnh và niềm hạnh phúc lớn lao đối với gia đình chúng tôi." />
+      <Invitation title="Anh/Chị/Bạn Bè/Đồng nghiệp tới dự bữa cơm thân mật mừng hạnh phúc của hai con chúng tôi." />
 
       {/* 3. thoi gian - dia diem */}
       <DateTimeLocation 
-        timeLine="09:30, Thứ Bảy"
+        timeLine="16:00, Thứ Bảy"
         day="28"
         month="02"
         year="2026"
         locationName="LỄ VU QUY"
         address="Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh"
+        lunarDate="(Nhằm ngày 12 tháng 01 năm Bính Ngọ)"
       />
 
       {/* 4. gui loi chuc - xac nhan tham du */}
@@ -77,9 +78,6 @@ function DonDau() {
 
       {/* 6. album anh cuoi */}
       <Album />
-
-            {/* 9. Sự kiện */}
-            <Events />
 
       <footer className="py-12 bg-white text-stone-400 text-center text-sm font-light relative z-20">
         <p className="uppercase tracking-[0.3em] mb-4">Wedding Celebration</p>

@@ -45,7 +45,7 @@ function DonDau() {
         open={isRsvpOpen} 
         onOpenChange={setIsRsvpOpen} 
         eventType="Lễ Vu Quy"
-        eventDateLabel="Lễ Vu Quy — 08h00, 28/02/2026"
+        eventDateLabel="Lễ Vu Quy — 09h30, 28/02/2026"
       />
       <MusicPlayer isPlaying={isMusicPlaying} onToggle={() => setIsMusicPlaying(!isMusicPlaying)} />
       
@@ -71,6 +71,7 @@ function DonDau() {
         year="2026"
         locationName="LỄ VU QUY"
         address="Tổ dân phố Đồng Sau, phường Tiền Phong, tỉnh Bắc Ninh"
+        lunarDate="(Nhằm ngày 12 tháng 01 năm Bính Ngọ)"
       />
 
       {/* 4. gui loi chuc - xac nhan tham du */}

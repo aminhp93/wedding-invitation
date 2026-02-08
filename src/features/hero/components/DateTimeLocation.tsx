@@ -7,6 +7,7 @@ interface DateTimeLocationProps {
   year?: string;
   locationName?: string;
   address?: string;
+  lunarDate?: string;
 }
 
 export const DateTimeLocation = ({
@@ -15,7 +16,8 @@ export const DateTimeLocation = ({
   month = "03",
   year = "2026",
   locationName = "W.JARDIN (Sảnh 3)",
-  address = "Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng"
+  address = "Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng",
+  lunarDate
 }: DateTimeLocationProps) => {
     return (
         <section className="py-24 bg-[#FFF9F6] relative overflow-hidden">
@@ -44,6 +46,11 @@ export const DateTimeLocation = ({
                         <div className="w-px h-16 bg-stone-200"></div>
                         <span className="text-4xl md:text-6xl font-serif text-[#A03D1A] font-light">{year}</span>
                    </div>
+                   {lunarDate && (
+                       <p className="mt-4 text-stone-500 font-serif italic text-sm md:text-base">
+                           {lunarDate}
+                       </p>
+                   )}
                 </div>
 
                 <div className="space-y-4">

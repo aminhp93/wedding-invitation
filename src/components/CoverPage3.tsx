@@ -7,7 +7,7 @@ interface CoverPageProps {
   guestName?: string
 }
 
-export function CoverPage({ onOpen, guestName = "Anh/Chị/Bạn bè/Đồng nghiệp" }: CoverPageProps) {
+export function CoverPage({ onOpen, guestName = "Quý Khách" }: CoverPageProps) {
   return (
     <motion.div 
         initial={{ opacity: 1 }}
@@ -28,12 +28,12 @@ export function CoverPage({ onOpen, guestName = "Anh/Chị/Bạn bè/Đồng ngh
         </div>
 
         <h2 className="text-stone-400 uppercase tracking-widest text-xs mb-4">Thân mời</h2>
-        <h1 className="text-2xl md:text-4xl font-serif italic text-[#A03D1A] mb-8">
+        <h1 className="text-4xl md:text-5xl font-serif italic text-[#A03D1A] mb-8">
           {guestName}
         </h1>
         
         <p className="text-stone-600 mb-12 italic font-serif leading-relaxed">
-          Trân trọng kính mời tới dự bữa tiệc thân mật mừng lễ đính hôn của hai con chúng tôi.
+          Trân trọng kính mời tới dự bữa tiệc thân mật mừng lễ thành hôn của chúng tôi.
         </p>
 
         <Button 

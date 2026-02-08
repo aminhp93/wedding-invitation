@@ -15,7 +15,7 @@ import { StorySection } from '@/features/our-story/components/StorySection'
 import * as React from 'react'
 import { MusicPlayer } from '@/components/MusicPlayer'
 import { AnimatePresence, motion } from 'framer-motion'
-import { CoverPage } from '@/components/CoverPage'
+import { CoverPage } from '@/components/CoverPage3'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -71,6 +71,7 @@ function Index() {
         year="2026"
         locationName="LỄ THÀNH HÔN"
         address="W.JARDIN (Sảnh 3), Số 307 Nguyễn Văn Linh, Lê Chân, Hải Phòng"
+        lunarDate="(Nhằm ngày 19 tháng 01 năm Bính Ngọ)"
       />
 
       {/* 4. gui loi chuc - xac nhan tham du */}

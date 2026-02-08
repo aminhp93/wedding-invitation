@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 export const Invitation = ({
-    title="Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình có thêm một niềm hạnh&nbsp;phúc!",
+    title="Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình có thêm một niềm hạnh phúc!",
     
 }: {
     title?: string
